@@ -11,16 +11,7 @@ int main()
     {
         int x, y, n;
         cin >> x >> y >> n;
-        int k = n;
 
-        if (n % x == y)
-            cout << n << endl;
-        else
-        {
-            while (k % x != y)
-                k--;
-
-            cout << k << endl;
-        }
+        cout << n - ((n - y) % x) << endl;
     }
 }
