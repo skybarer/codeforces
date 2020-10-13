@@ -4,9 +4,8 @@ using namespace std;
 #define ll long long
 
 int main() {
-    long n;
-    cin >> n;
-    cout << n * (n + 1) / 2;
-
-    return 0;
+  ll a, b;
+  cin >> a >> b;
+  cout << a + b;
+  return 0;
 }
