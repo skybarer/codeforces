@@ -1,31 +1,36 @@
-#include <algorithm>
 #include <iostream>
-#include <string>
 #include <vector>
-
+#include <algorithm>
+#include <string>
 using namespace std;
 #define endl "\n"
 #define ll long long
+#define fi first
+#define se second
 
 int n;
-vector<string> words;
+vector<string> list;
 
 int main() {
-  cin >> n;
-  words.resize(n);
+   
+   cin >> n;
+   list.resize(n);
 
-  for (int i = 0; i < n; i++) {
-    cin >> words[i];
-    sort(words[i].begin(), words[i].end());
-  }
-  sort(words.begin(), words.end());
+   for (int i = 0; i < n; i++) {
+        string ele;
+        cin >> ele;
+        sort(ele.begin(), ele.end());  
+        list[i] = ele;      
+   }
 
-  int count = 1;
-  for (int i = 1; i < words.size(); i++) {
-    if (words[i - 1] != words[i])
-      count++;
-  }
+   sort(list.begin(), list.end());
 
-  cout << count << "\n";
-  return 0;
+    int ans = 1;
+   for (int i = 1; i < n; i++) {
+        if(list[i] != list[i-1]){
+            ans++;
+        }
+   }
+
+   cout << ans << endl;
 }
