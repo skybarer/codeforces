@@ -17,5 +17,5 @@
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}",
     // "editor.lineHeight": 20,
     // "editor.fontSize": 14.5,
-    "editor.autoClosingBrackets": "never"
+    "editor.autoClosingBrackets": "languageDefined"
 }
