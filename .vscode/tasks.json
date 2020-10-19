@@ -7,9 +7,15 @@
             "command": "C:\\MinGW\\bin\\g++.exe",
             "args": [
                 "-g",
+                // "-Wall",
+                // "-Wextra",
+                // "-Wshadow",
+                // "-Wformat=2",
+                // "-Wfloat-equal",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-DAKP"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
