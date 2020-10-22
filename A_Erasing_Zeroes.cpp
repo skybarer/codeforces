@@ -40,20 +40,25 @@ string s;
 
 void solve() {
     cin1(s);
+
     int l = 0;
     int r = 0;
     int n = s.size();
     
     for (int i = 0; i < n; i++) {
-        if(s[i] == '1') l = i; break;
-    
+        if(s[i] == '1') {
+            l = i;
+             break;
+       }
     } 
-    for (int i = n-1; i > 0; i--) {
-        if(s[i] == '1') r = i; break;
+    for (int i = n; i >= 0; i--) {
+        if(s[i] == '1') {
+            r = i; break;
+        }
     }
 
     int ans = 0;
-    for (int i = l+1; i < r-1; i++) {
+    for (int i = l + 1; i < r; i++) {
         if(s[i] == '0') ans++;
     } 
 
