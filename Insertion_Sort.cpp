@@ -19,7 +19,7 @@ int main() {
     printArray(A, n);
     for (int i = 1; i < n; i++) {
         int key = A[i];
-        // insert A[i] in sotred sequence
+        // insert A[i] in sortred sequence
         int j = i - 1;
         while(j >= 0 && A[j] > key) {
             A[j+1] = A[j];
