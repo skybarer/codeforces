@@ -2,9 +2,10 @@
 using namespace std;
 
 int main() {
-    int n1, n2, k1, k2; cin >> n1 >> n2 >> k1 >> k2;
-
-    if(n1 <= n2)  cout << "Second" << endl;
-    else if(n1 > n2)  cout << "First" << endl;
-    
+    int n; cin >> n;
+    vector<int> arr(n); for (int i = 0; i < n; i++) cin >> arr[i];
+    sort(arr.begin(), arr.end());
+    // for (int i = 0; i < n; i++) cout << arr[i] << " "; cout << endl;
+    if(n % 2 == 0) cout << arr[(n-1)/2] << endl;
+    else cout << arr[n/2] << endl;
 }
