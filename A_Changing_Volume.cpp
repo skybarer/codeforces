@@ -12,7 +12,8 @@ int main() {
             int num = abs(a- b);
             while(num > 0 && i >= 0) {
                 if(num >= arr[i]) {
-                    num -= arr[i]; moves++;
+                    moves += num /arr[i] ;
+                    num = num % arr[i];
                 } else {
                     i--;
                 }
